@@ -18,7 +18,7 @@ function Project() {
 
   return (
     <div className='p-4'>
-      <h1 className="text-xl text-center text-blue-800 md:text-3x1 lg:4x1">Featured Projects</h1>
+      <h1 id="projects" className="heading">Featured Projects</h1>
 
       <section className='flex flex-col md:flex-row'>
         {projects.map((project, index) => (

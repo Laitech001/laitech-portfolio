@@ -22,13 +22,14 @@ export default function Header() {
 
         <nav className="lg:flex space-x-6">
           <a href="#home" className="hover:text-blue-500">Home</a>
-          <a href="#projects" className="hover:text-blue-500">Projects</a>
           <a href="#about" className="hover:text-blue-500">About</a>
+          <a href="#service" className="hover:text-blue-500">Service</a>
+          <a href="#projects" className="hover:text-blue-500">Projects</a>
           <a href="#contact" className="hover:text-blue-500">Contact</a>
         </nav>
 
         <button 
-          className='hidden lg:block primary-btn'
+          className='hidden lg:block primary-btn hover:scale-105 transition all duration-400'
         >
           Contact Us
         </button>
@@ -79,16 +80,28 @@ export default function Header() {
         </button>
 
         {menuOpen && (
-          <nav className="lg:hidden bg-white shadow-md">
-            <a href="#home" className="block px-4 py-2 hover:bg-gray-100">Home</a>
-            <a href="#projects" className="block px-4 py-2 hover:bg-gray-100">Projects</a>
-            <a href="#about" className="block px-4 py-2 hover:bg-gray-100">About</a>
-            <a href="#contact" className="block px-4 py-2 hover:bg-gray-100">Contact</a>
+          <div className='fixed inset-0 bg-white z-50 flex flex-col p-6'>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="text-2xl"
+            >
+              ✕
+            </button>
 
-            <button className='primary-btn'>
+            <nav className="lg:hidden bg-white shadow-md">
+              <a href="#home" className="block px-4 py-2 hover:bg-gray-100">Home</a>
+              <a href="#projects" className="block px-4 py-2 hover:bg-gray-100">Projects</a>
+              <a href="#about" className="block px-4 py-2 hover:bg-gray-100">About</a>
+              <a href="#contact" className="block px-4 py-2 hover:bg-gray-100">Contact</a>
+            </nav>
+
+            <div className='flex items-center justify-center'>
+              <button className='primary-btn hover:scale-105 transition all duration-400'>
               Contact Us
             </button>
-          </nav>
+            </div>
+          </div>
+          
         )}
       </section>
     </div>

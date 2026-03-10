@@ -6,17 +6,17 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      <h1 id='contact' className="text-center text-xl text-blue-800 mb-2 md:text-3x1 lg:text-4x1">Contact Info:</h1>
+      <h1 id='contact' className="heading mb-8">Contact Info:</h1>
       
-      <ul>
-        <li className='techstack-li'>
+      <ul className='flex flex-col md:flex-row justify-center items-center gap-3'>
+        <li className='techstack-li mb-3 w-100'>
           <Mail /> 
           <a href="mailto:contact.laitech@gmail.com">
             contact.laitech@gmail.com
           </a>
         </li>
 
-        <li className='techstack-li'>
+        <li className='techstack-li mb-3 w-100'>
           <MessageCircle /> 
           <button>
             <a href={whatsappLink} target="_blank"
@@ -26,7 +26,7 @@ export default function Contact() {
           </button>
         </li>
 
-        <li className='techstack-li mb-3'>
+        <li className='techstack-li w-100 mb-3'>
           <PhoneCall />
           <a href="tel:+2347062639160">
             +234 706 263 9160
