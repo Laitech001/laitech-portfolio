@@ -18,13 +18,17 @@ function About() {
         <Image
           src={laitechDeveloper}
           alt='Developer'
-          width={350}
-          height={300}
+          width={300}
+          height={250}
           priority
           className='rounded-lg'
         />
 
-        <p className='text-center lg:w-250 text-gray-800'>Hi, I'm Abdulganiy Ibrahim, the developer behind Laitech.I focus on building fast, modern, and scalable websites for businesses and startups using modern web technologies. I enjoy turning ideas into real digital products that help businesses grow online. My goal with Laitech is to provide reliable web solutions that are not only visually appealing but also optimized for performance and usability. I work with modern tools like Next.js, React, and Tailwind CSS to build responsive and efficient web applications. Whether it's a business website, landing page, or web application, I focus on delivering solutions that are clean, fast, and easy for users to interact with.</p>
+          <p className='text-center lg:w-250 text-gray-800'>
+            I’m Abdulganiy Ibrahim, a software developer and the creator of Laitech.
+            I build fast, modern, and scalable web applications for businesses and startups using Next.js, React, and Tailwind CSS.
+            I focus on turning ideas into clean, high-performing digital products that help businesses grow online.
+        </p>
 
       </section>
     </motion.div>

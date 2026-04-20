@@ -13,7 +13,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Building fast, modern websites for businesses and startups.
+        Building fast, modern websites that help businesses grow online.
       </motion.h1>
       <motion.p 
         className='text-gray-700 mb-5'
@@ -21,7 +21,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        Laitech helps businesses create powerful web experiences using modern technologies.
+        Laitech helps startups and businesses turn ideas into high-performing web applications using modern technologies.
       </motion.p>
 
       <section className='flex justify-center item-center gap-4'>
