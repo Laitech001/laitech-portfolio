@@ -6,7 +6,8 @@ export default function ContactForm() {
   const [formData, setFormData] = useState(
     {
       name: '',
-      message: ''
+      email: '',
+      message: '',
     }
   );
 
@@ -30,6 +31,20 @@ export default function ContactForm() {
       </div>
 
       <div>
+        <Label htmlFor='email'>
+          Email
+        </Label>
+
+        <TextInput 
+          id='email'
+          type='email'
+          placeholder='Email'
+          value={formData.email}
+          onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+        />
+      </div>
+
+      <div>
         <Label htmlFor='message'>
           message
         </Label>
@@ -38,7 +53,7 @@ export default function ContactForm() {
           id='message'
           placeholder='Type in your message'
           value={formData.message}
-          onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+          onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
         />
       </div>
       
