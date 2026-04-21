@@ -8,7 +8,7 @@ export default function ContactDetails() {
 
   return (
     <Card className=''>
-      <h1 className='text-xl md:text-2xl text-gray-900 text-center m-2'>Contact Details</h1>
+      <h1 className='text-xl md:text-2xl text-gray-900 text-center mb-3'>Contact Details</h1>
       
       <ul className='flex flex-col justify-center items-center gap-3'>
         <li className='techstack-li mb-3 w-100'>

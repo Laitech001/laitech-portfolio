@@ -13,7 +13,7 @@ export default function ContactForm() {
   
   return (
     <Form>
-      <h1 className='text-xl md:text-2xl text-gray-900 text-center'>Send Us a Message</h1>
+      <h1 className='text-xl md:text-2xl text-gray-900 text-center mb-3'>Send Us a Message</h1>
 
       <div>
         <Label htmlFor='name'>

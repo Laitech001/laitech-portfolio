@@ -12,7 +12,7 @@ function About() {
       id="about" 
       className="py-24 px-10 scroll-mt-24"
     >
-      <h1 className="heading mb-2">About Laitech</h1>
+      <h1 className="heading mb-3">About Laitech</h1>
 
       <section className="flex flex-col justify-center gap-4 lg:flex-row lg:gap-10">
         <Image

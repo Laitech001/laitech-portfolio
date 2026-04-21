@@ -13,7 +13,7 @@ type ButtonProps = {
 export default function Button({ children, onClick, varient = 'primary', size = 'medium', type = 'button', loading = false, disabled = false, className }: ButtonProps) {
 
   const varientClasses = {
-    primary: 'bg-blue-500 text-white hover:bg-blue-600 border border-blue-500',
+    primary: 'bg-blue-800 text-white hover:bg-blue-700 border border-blue-800',
     secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 border border-gray-300',
     danger: 'bg-red-500 text-white hover:bg-red-600 border border-red-500',
   }

@@ -16,7 +16,7 @@ function ProjectCard({ imagePath, title, desc, websiteUrl}: ProjectCardProps) {
           alt={title}
           width={350} 
           height={350}
-          className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out" 
+          className="w-full h-auto rounded-lg hover:scale-105 transition-transform duration-500 ease-in-out mb-4" 
         />
       )}
       <h1 className="text-xl text-blue-800 font-semibold mb-1 item-start">{title}</h1>

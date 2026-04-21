@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Project from "./components/Project";
 import Service from "./components/Service";
 import TechStack from "./components/TechStack";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Service />
       <Project /> 
       <Contact />
+      <Footer />
     </>
   );
 }
