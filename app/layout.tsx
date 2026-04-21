@@ -10,8 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Utility Toolbox",
-  description: "Powered by Laitech",
+  title: "Abdulganiy Ibrahim - Software Developer | Laitech",
+  description: "I build fast, modern, and scalable websites for businesses and startups using Next.js, React, and Tailwind CSS.",
+  keywords: ['Abdulganiy Ibrahim', 'Laitech', 'FullStack Developer', 'Next.Js Developer', 'React Developer', 'Node.Js Developer']
 };
 
 export default function RootLayout({
