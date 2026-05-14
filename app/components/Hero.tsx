@@ -1,33 +1,40 @@
 "use client"
 import { motion } from 'motion/react'
+import { Button, GradientButton } from '@/ui'
 
 function Hero() {
   return (
     <div 
       id='home'
-      className='px-2 text-center'
+      className='p-10 text-center'
     >
       <motion.h1 
-        className='text-xl text-blue-800 md:text-3xl lg:text-5xl py-4'
+        className='mx-auto text-2xl font-semibold md:text-3xl lg:text-5xl max-w-4xl py-4'
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Building fast, modern websites that help businesses grow online.
+        We turn ideas into 
+        <span className='bg-linear-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'> high-performing web applications</span>
       </motion.h1>
+
       <motion.p 
-        className='text-gray-700 mb-5'
+        className='mx-auto text-sm md:text-base lg:text-lg text-gray-700 mb-5'
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
-        Laitech helps startups and businesses turn ideas into high-performing web applications using modern technologies.
+        Laitech builds modern websites and web applications — secure, responsive, and performance-driven. Crafted to elevate brands and deliver real results.
       </motion.p>
 
-      <section className='flex justify-center item-center gap-4'>
-        <button className='primary-btn hover:scale-105 transition all duration-400'>Contact Me</button>
-        <button className='secondary-btn hover:scale-105 transition all duration-400'>View Project</button>
+      <section className='flex justify-center items-center gap-4'>
+        <GradientButton className='rounded-full hover:scale-105 transition-all duration-400'>Contact Me</GradientButton>
+
+        <Button variant='secondary' className='rounded-full hover:scale-105 transition-all duration-400'>
+          View Project
+        </Button>
       </section>
+
     </div>
   )
 }

@@ -1,109 +1,182 @@
 "use client"
-import Image from 'next/image'
+
 import { useState } from 'react'
+import { GradientButton, LaitechLogo } from '@/ui'
+import { Menu, X } from 'lucide-react'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="p-4 sticky top-0 z-50 bg-white/50 backdrop-blur">
-      <section className='hidden lg:flex justify-between items-center'>
-        <div className='flex item-center'>
-          <Image 
-            src='/images/laitech-logo.webp'
-            alt='logo image'
-            width={50}
-            height={50}
-            priority
-          />
-          <h1 className='text-xl md:text-3xl lg:4xl'>
-            Laitech
-          </h1>
-        </div>
+    <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-gray-100">
 
-        <nav className="lg:flex space-x-6">
-          <a href="#home" className="hover:text-blue-500">Home</a>
-          <a href="#about" className="hover:text-blue-500">About</a>
-          <a href="#service" className="hover:text-blue-500">Service</a>
-          <a href="#projects" className="hover:text-blue-500">Projects</a>
-          <a href="#contact" className="hover:text-blue-500">Contact</a>
-        </nav>
+      <div className="max-w-7xl mx-auto px-4 py-4">
 
-        <button 
-          className='hidden lg:block primary-btn hover:scale-105 transition all duration-400'
-        >
-          Contact Us
-        </button>
-      </section>
+        {/* Desktop Layout */}
+        <section className="hidden lg:flex justify-between items-center">
 
-      <section className='lg:hidden flex justify-between items-center'>
+          {/* Logo */}
+          <div className="flex items-center gap-3">
 
-        <div className='flex item-center'>
-          <Image 
-            src='/images/laitech-logo.webp'
-            alt='logo image'
-            width={50}
-            height={50}
-            priority
-          />
-          <h1 className='text-xl md:text-3xl lg:4xl'>
-            Laitech
-          </h1>
-        </div>
+            <LaitechLogo />
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden p-2 rounded-md hover:bg-gray-200 focus:outline-none"
-        >
-          <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            > 
-              {menuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-        </button>
+            <div className="flex flex-col">
+              <h1 className="text-xl font-bold text-gray-900">
+                Laitech
+              </h1>
 
-        {menuOpen && (
-          <div className='fixed inset-0 bg-white z-50 flex flex-col p-6'>
-            <button
-              onClick={() => setMenuOpen(false)}
-              className="text-2xl"
-            >
-              ✕
-            </button>
-
-            <nav className="lg:hidden bg-white shadow-md">
-              <a href="#home" className="block px-4 py-2 hover:bg-gray-100">Home</a>
-              <a href="#projects" className="block px-4 py-2 hover:bg-gray-100">Projects</a>
-              <a href="#about" className="block px-4 py-2 hover:bg-gray-100">About</a>
-              <a href="#contact" className="block px-4 py-2 hover:bg-gray-100">Contact</a>
-            </nav>
-
-            <div className='flex items-center justify-center'>
-              <button className='primary-btn hover:scale-105 transition all duration-400'>
-              Contact Us
-            </button>
+              <p className="text-xs tracking-wide text-gray-500">
+                SMART DIGITAL SOLUTIONS
+              </p>
             </div>
+
           </div>
-          
-        )}
-      </section>
-    </div>
+
+          {/* Nav */}
+          <nav className="flex items-center gap-8">
+
+            <a
+              href="#home"
+              className="font-medium text-gray-700 hover:border-b-2 border-cyan-500 hover:text-cyan-600 transition-all"
+            >
+              Home
+            </a>
+
+            <a
+              href="#about"
+              className="font-medium text-gray-700 hover:border-b-2 border-cyan-500 hover:text-cyan-600 transition-all"
+            >
+              About
+            </a>
+
+            <a
+              href="#service"
+              className="font-medium text-gray-700 hover:border-b-2 border-cyan-500 hover:text-cyan-600 transition-all"
+            >
+              Service
+            </a>
+
+            <a
+              href="#projects"
+              className="font-medium text-gray-700 hover:border-b-2 border-cyan-500 hover:text-cyan-600 transition-all"
+            >
+              Projects
+            </a>
+
+            <a
+              href="#contact"
+              className="font-medium text-gray-700 hover:border-b-2 border-cyan-500 hover:text-cyan-600 transition-all"
+            >
+              Contact
+            </a>
+
+          </nav>
+
+          {/* Button */}
+          <GradientButton className="rounded-full px-6 py-3">
+            Contact Us
+          </GradientButton>
+
+        </section>
+
+        {/* Mobile Layout */}
+        <section className="lg:hidden relative">
+
+          {/* Top Bar */}
+          <div className="flex justify-between items-center">
+
+            {/* Logo */}
+            <div className="flex items-center gap-3">
+
+              <LaitechLogo />
+
+              <div className="flex flex-col">
+                <h1 className="text-lg font-bold text-gray-900">
+                  Laitech
+                </h1>
+
+                <p className="text-[10px] tracking-wide text-gray-500">
+                  SMART DIGITAL SOLUTIONS
+                </p>
+              </div>
+
+            </div>
+
+            {/* Menu Button */}
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="bg-cyan-50 backdrop-blur-sm text-black p-3 rounded-xl shadow-md hover:scale-105 transition-all duration-200"
+            >
+              {menuOpen ? (
+                <X size={22} strokeWidth={2.8} />
+              ) : (
+                <Menu size={22} strokeWidth={2.8} />
+              )}
+            </button>
+
+          </div>
+
+          {/* Mobile Dropdown */}
+          {menuOpen && (
+            <div
+              className="absolute top-full left-0 mt-4 w-full p-4 bg-white/95 backdrop-blur-md border border-gray-100 shadow-2xl rounded-2xl overflow-hidden animate-in slide-in-from-top-2 duration-300"
+            >
+
+              <nav className="flex flex-col p-3">
+
+                <a
+                  href="#home"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-all"
+                >
+                  Home
+                </a>
+
+                <a
+                  href="#about"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-all"
+                >
+                  About
+                </a>
+
+                <a
+                  href="#service"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-all"
+                >
+                  Service
+                </a>
+
+                <a
+                  href="#projects"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-all"
+                >
+                  Projects
+                </a>
+
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl font-medium text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-all"
+                >
+                  Contact
+                </a>
+
+              </nav>
+
+              <GradientButton className="rounded-full w-full">
+                Hire Me
+              </GradientButton>
+
+            </div>
+          )}
+
+        </section>
+
+      </div>
+
+    </header>
   )
 }
